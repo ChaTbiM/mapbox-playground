@@ -15,32 +15,32 @@ var locations = [
   {
     name: "3005 N Adams St Tampa",
     coordinates: [-82.4913, 27.8708], // Longitude, Latitude format
-    src: "1.jpg",
+    src: "https://uc.orez.io/i/02207b99f6494f1fb1ae1eff45bf440a-Large",
   },
   {
     name: "8101 140th St Seminole",
     coordinates: [-82.83241, 27.8466],
-    src: "2.jpg",
+    src: "https://uc.orez.io/i/2e2f2bb7aca8485a9c1b82e289222b95-Large",
   },
   {
     name: "922 E Columbus Dr Tampa",
     coordinates: [-82.44944, 27.96699],
-    src: "3.jpg",
+    src: "https://uc.orez.io/i/fb8718c90a7743608d095fd46239a333-Large",
   },
   {
     name: "114 Euclid Loop Seffner",
     coordinates: [-82.280235, 27.985475],
-    src: "4.jpg",
+    src: "https://uc.orez.io/i/39b88e45817744db898880881809f6d3-Large",
   },
   {
     name: "2012 E Seward St Tampa",
     coordinates: [-82.435475, 28.028465],
-    src: "5.png",
+    src: "https://s3.amazonaws.com/cdn.secure.ownerrez.com/files/80df0ac1a2cb45428ce8a9d9156e59bc",
   },
   {
     name: "10150 61st Way pinellas Park",
     coordinates: [-82.71741, 27.86385],
-    src: "6.jpg",
+    src: "https://uc.orez.io/i/6fc96659b84f4f2c9b767ca8c8ebe567-Large",
   },
   // Add more locations as needed
 ];
@@ -57,10 +57,10 @@ locations.forEach(function (location, locationIndex) {
   el.style.height = "30px";
 
   const popupNodeElement = document.createElement("div");
-  popupNodeElement.classList.add("property__popup");
 
   const popupImg = document.createElement("img");
-  popupImg.setAttribute("src", `../assets/${location.src}`);
+  popupImg.style.width = "100%";
+  popupImg.setAttribute("src", location.src);
 
   const popupTitle = document.createElement("h3");
   popupTitle.textContent = location.name;
