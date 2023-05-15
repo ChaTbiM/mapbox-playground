@@ -1,0 +1,29 @@
+{
+  "name": "mapbox-playground",
+  "version": "1.0.0",
+  "description": "playground project for mapbox using vanillaJS",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChaTbiM/mapbox-playground.git"
+  },
+  "keywords": [
+    "mapbox",
+    "javascript",
+    "geocoding",
+    "map"
+  ],
+  "author": "Mustapha Chatbi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChaTbiM/mapbox-playground/issues"
+  },
+  "homepage": "https://github.com/ChaTbiM/mapbox-playground#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
