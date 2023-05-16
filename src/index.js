@@ -5,7 +5,7 @@ mapboxgl.accessToken =
 // Initialize the map
 var map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/mapbox/streets-v11", // Choose your desired map style
+  style: "mapbox://styles/mapbox/outdoors-v12?optimize=true", // optimize=true
   center: [-82.4913, 27.8708], // Set the initial center of the map
   zoom: 10, // Set the initial zoom level
 });
@@ -77,6 +77,12 @@ locations.forEach(function (location, locationIndex) {
     .setLngLat(location.coordinates)
     .setPopup(popup) // Customize the popup content
     .addTo(map);
+
+  el.addEventListener("click", () =>
+    map.flyTo({
+      center: location.coordinates,
+    })
+  );
   popupInstances.push(popup);
 });
 
@@ -91,5 +97,8 @@ propertyImages.forEach((propertyImage, index) => {
     }
     popupInstances[index].addTo(map);
     openPopupInstances.push(popupInstances[index]);
+    map.flyTo({
+      center: locations[index].coordinates,
+    });
   });
 });
